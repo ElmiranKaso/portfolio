@@ -270,3 +270,13 @@ img {
 
 
 /* For large devices */
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home__description {
+    margin-inline: auto;
+  }
+}
