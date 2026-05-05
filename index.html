@@ -1,103 +1,154 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<title>Elmiran Portfolio</title>
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+<style>
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   background: #0f172a;
+   color: white;
+}
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+/* NAVBAR */
+nav {
+   display: flex;
+   justify-content: center;
+   gap: 25px;
+   padding: 20px;
+   background: #020617;
+}
 
-      <title>Responsive portfolio website Rian - Bedimcode</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <header class="header" id="header">
-   <nav style="display:flex; justify-content:center; gap:20px; padding:20px;">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#cv">CV</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact Me</a>
-   </nav>
-</header>
-         
-      </header>
+nav a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-   <div class="container home">
+/* SECTIONS */
+section {
+   padding: 60px 20px;
+   max-width: 1000px;
+   margin: auto;
+}
 
-      <!-- LEFT SIDE -->
-      <div class="home__content">
-         <h1 class="home__title">Hi, I'm Elmiran 👋</h1>
+/* BUTTON */
+.button {
+   display: inline-block;
+   padding: 10px 20px;
+   background: #3b82f6;
+   color: white;
+   border-radius: 8px;
+   text-decoration: none;
+   margin: 5px;
+}
 
-         <h3 class="home__subtitle">
-            Electrical Engineer
-         </h3>
+.button:hover {
+   background: #2563eb;
+}
 
-         <p class="home__description">
-            Welcome to my portfolio website. I specialize in electrical engineering, systems, and programming projects.
+/* ABOUT */
+.about-container {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+   flex-wrap: wrap;
+}
+
+.about-container img {
+   width: 250px;
+   border-radius: 15px;
+}
+
+/* PROJECTS */
+.project {
+   background: #1e293b;
+   padding: 20px;
+   margin-top: 20px;
+   border-radius: 10px;
+}
+
+.project img {
+   width: 100%;
+   border-radius: 10px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+   <a href="#about">About</a>
+   <a href="#projects">Projects</a>
+   <a href="#cv">CV</a>
+   <a href="#contact">Contact Me</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+   <h2>About Me</h2>
+
+   <div class="about-container">
+
+      <!-- TEXT -->
+      <div>
+         <p>
+            Hi, I'm Elmiran, an Electrical Engineer passionate about systems, programming, and innovation.
          </p>
 
-         <a href="#contact" class="button">Contact Me</a>
+         <!-- SOCIAL BUTTONS -->
+         <a href="https://linkedin.com" target="_blank" class="button">LinkedIn</a>
+         <a href="mailto:your@email.com" class="button">Gmail</a>
       </div>
 
-      <!-- RIGHT SIDE -->
-      <div class="home__img">
-         <img src="assets/img/profile.jpg" alt="My Profile">
-      </div>
+      <!-- IMAGE -->
+      <img src="assets/img/profile.jpg" alt="Profile Photo">
 
    </div>
 </section>
+
+<!-- PROJECTS -->
+<section id="projects">
+   <h2>My Projects</h2>
+
+   <!-- PROJECT 1 -->
+   <div class="project">
+      <img src="assets/img/project1.jpg" alt="Project 1">
+
+      <h3>Project Title</h3>
+      <p>This is a description of my project.</p>
+
+      <a href="assets/files/project1.pdf" class="button" target="_blank">View PDF</a>
+      <a href="https://github.com/yourusername/project1" target="_blank" class="button">GitHub</a>
+   </div>
+
+   <!-- ADD MORE PROJECTS BY COPYING ABOVE BLOCK -->
+
 </section>
-            
-         </section>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            
-         </section>
+<!-- CV -->
+<section id="cv">
+   <h2>My CV</h2>
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section">
-            
-         </section>
+   <!-- VIEW CV -->
+   <iframe src="assets/cv/Elmiran_CV.pdf" width="100%" height="500px"></iframe>
 
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            
-         </section>
+   <!-- DOWNLOAD -->
+   <br><br>
+   <a href="assets/cv/Elmiran_CV.pdf" download class="button">Download CV</a>
+</section>
 
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            
-         </section>
-      </main>
+<!-- CONTACT -->
+<section id="contact">
+   <h2>Contact Me</h2>
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
+   <p>Email: your@email.com</p>
+</section>
 
-      <!--========== SCROLL UP ==========-->
-      
-
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
-      
-      <!--=============== EMAIL JS ===============-->
-      
-
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+</body>
 </html>
