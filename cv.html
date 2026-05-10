@@ -1,58 +1,337 @@
-<h1>CV</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Elmiran Kaso</title>
 
-<a href="assets/Elmiran_CV.pdf" download class="btn">Download PDF</a>
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f4f4;
+  color:#111;
+}
 
-<div class="cv-container">
+.page{
+  max-width:1200px;
+  margin:25px auto;
+  background:white;
+  padding:25px 45px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
 
-  <!-- LEFT MENU -->
-  <div class="cv-menu">
-    <p><a href="#contact">Contact</a></p>
-    <p><a href="#summary">Summary</a></p>
-    <p><a href="#experience">Experience</a></p>
-    <p><a href="#skills">Skills</a></p>
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:50px;
+}
+
+.logo{
+  font-weight:bold;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#111;
+  margin:0 15px;
+  font-size:14px;
+}
+
+.nav-links a.active{
+  color:#b000b5;
+  font-weight:bold;
+}
+
+.contact-btn{
+  background:#111;
+  color:white!important;
+  padding:12px 18px;
+}
+
+.cv-layout{
+  display:grid;
+  grid-template-columns:230px 1fr;
+  gap:45px;
+}
+
+.cv-sidebar{
+  position:sticky;
+  top:25px;
+  height:max-content;
+}
+
+.cv-sidebar a{
+  display:block;
+  color:#111;
+  text-decoration:none;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.cv-sidebar a:hover{
+  color:#b000b5;
+}
+
+.cv-main h1{
+  font-size:48px;
+  margin-top:0;
+  font-weight:400;
+}
+
+.download{
+  float:right;
+  background:#b000b5;
+  color:white;
+  text-decoration:none;
+  padding:12px 20px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.cv-card{
+  background:white;
+  padding:28px;
+  margin-bottom:25px;
+  box-shadow:0 4px 18px rgba(0,0,0,.15);
+  border-radius:6px;
+}
+
+.cv-card h2{
+  font-size:34px;
+  font-weight:400;
+  margin-top:0;
+}
+
+.cv-row{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:20px;
+  margin-bottom:14px;
+}
+
+.cv-row strong{
+  font-size:18px;
+}
+
+.experience-item{
+  border-bottom:1px solid #ddd;
+  padding-bottom:25px;
+  margin-bottom:25px;
+}
+
+.experience-item:last-child{
+  border-bottom:none;
+}
+
+.date{
+  display:inline-block;
+  background:#b000b5;
+  color:white;
+  padding:6px 12px;
+  border-radius:5px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.company{
+  color:#555;
+  margin-bottom:10px;
+}
+
+ul{
+  margin-top:10px;
+}
+
+li{
+  margin-bottom:8px;
+  line-height:1.5;
+}
+
+@media(max-width:800px){
+  .cv-layout{
+    grid-template-columns:1fr;
+  }
+
+  .cv-sidebar{
+    position:static;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .download{
+    float:none;
+    display:inline-block;
+    margin-bottom:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<nav>
+  <div class="logo">● Elmiran Kaso</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a class="active" href="cv.html">CV</a>
+    <a class="contact-btn" href="contact.html">Contact Me</a>
   </div>
+</nav>
 
-  <!-- RIGHT CONTENT -->
-  <div class="cv-content">
+<div class="cv-layout">
 
-    <section id="contact">
+  <aside class="cv-sidebar">
+    <a href="#contact">Contact Information</a>
+    <a href="#summary">Professional Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#languages">Languages</a>
+  </aside>
+
+  <main class="cv-main">
+
+    <a class="download" href="assets/Elmiran_CV.pdf" download>Download PDF</a>
+
+    <h1>CV</h1>
+
+    <section class="cv-card" id="contact">
       <h2>Contact Information</h2>
-      <p><strong>Name:</strong> Elmiran Kaso</p>
-      <p><strong>Email:</strong> your@email.com</p>
-      <p><strong>Location:</strong> Switzerland</p>
+
+      <div class="cv-row">
+        <strong>Name</strong>
+        <span>Elmiran Kaso</span>
+      </div>
+
+      <div class="cv-row">
+        <strong>Professional Title</strong>
+        <span>Electrical Engineer</span>
+      </div>
+
+      <div class="cv-row">
+        <strong>Email</strong>
+        <span>kasoelmiran@gmail.com</span>
+      </div>
+
+      <div class="cv-row">
+        <strong>Location</strong>
+        <span>Spreitenbach, Aargau, Switzerland</span>
+      </div>
     </section>
 
-    <section id="summary">
+    <section class="cv-card" id="summary">
       <h2>Professional Summary</h2>
       <p>
-        Electrical Engineer with strong experience in design, system studies,
-        and project supervision across industrial and infrastructure projects.
+        Electrical Engineer specialized in electrical design, technical studies, calculations,
+        and project supervision across industrial and infrastructure projects, including
+        substations, electrical distribution networks, WWTP, and energy systems.
       </p>
     </section>
 
-    <section id="experience">
+    <section class="cv-card" id="experience">
       <h2>Experience</h2>
 
-      <h3>Data Center Technician II</h3>
-      <p>Digital Realty, Switzerland</p>
+      <div class="experience-item">
+        <span class="date">Dec. 2024 - Present</span>
+        <h3>Data Center Technician II / Site Engineering Environment</h3>
+        <p class="company">Digital Realty Switzerland GmbH, Glattbrugg, Switzerland</p>
+        <ul>
+          <li>Support mission-critical data center infrastructure and electrical systems.</li>
+          <li>Perform troubleshooting, monitoring, documentation, and technical coordination.</li>
+          <li>Work with BMS, Salesforce, iTRACS DCIM, vendors, and engineering teams.</li>
+        </ul>
+      </div>
 
-      <ul>
-        <li>Maintenance of electrical systems</li>
-        <li>Infrastructure monitoring</li>
-        <li>Troubleshooting mission-critical systems</li>
-      </ul>
+      <div class="experience-item">
+        <span class="date">Apr. 2024 - Nov. 2024</span>
+        <h3>Data Center Electrical Technician</h3>
+        <p class="company">CiriElektro AG, Zurich, Switzerland</p>
+        <ul>
+          <li>Installed, tested, and maintained electrical systems in data center environments.</li>
+          <li>Worked with UPS systems, PDUs, switchgear, MV panels, lighting, and fire protection systems.</li>
+          <li>Interpreted schematics, drawings, and technical documentation.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <span class="date">May 2018 - Mar. 2024</span>
+        <h3>Sales Executive Engineer / Sales Department Supervisor</h3>
+        <p class="company">Seller Hellas S.A., Athens, Greece</p>
+        <ul>
+          <li>Managed technical sales projects for substations, electrical panels, MV/LV switchgear, transformers, and special applications.</li>
+          <li>Supervised technical coordination between design, logistics, production, and customer requirements.</li>
+          <li>Worked with Schneider Electric, ABB, Siemens, and Legrand low-voltage equipment.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <span class="date">Feb. 2012 - May 2018</span>
+        <h3>Electrical Design Engineer</h3>
+        <p class="company">Zita Technologies Ltd</p>
+        <ul>
+          <li>Prepared studies, calculations, and designs for WWTP, substations, pump stations, and industrial projects.</li>
+          <li>Performed short-circuit, voltage drop, cable sizing, power, and protection selectivity calculations.</li>
+          <li>Used AutoCAD, Revit MEP, EPLAN, DIALux, Relux, 4M ADAPT, and TiSoft.</li>
+        </ul>
+      </div>
 
     </section>
 
-    <section id="skills">
+    <section class="cv-card" id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Electrical Engineering</strong><br>
+      University of West Attica, Athens</p>
+    </section>
+
+    <section class="cv-card" id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>AutoCAD, Revit, EPLAN</li>
-        <li>Electrical design & calculations</li>
-        <li>Project supervision</li>
+        <li>Electrical design and technical studies</li>
+        <li>Project supervision and site coordination</li>
+        <li>MV/LV substations and electrical distribution systems</li>
+        <li>WWTP, industrial, hospital, marine, and heavy industry projects</li>
+        <li>AutoCAD, Revit MEP, EPLAN Electric P8, DIALux, Relux</li>
+        <li>BMS, Salesforce, iTRACS DCIM</li>
       </ul>
     </section>
 
-  </div>
+    <section class="cv-card" id="certificates">
+      <h2>Certificates</h2>
+      <ul>
+        <li>Schneider Electric - Data Center Physical Infrastructure</li>
+        <li>Schneider Electric - Best Practices for Building a New Data Center</li>
+        <li>AutoCAD 2D & 3D Modeling</li>
+        <li>KNX Basic Course</li>
+        <li>EPLAN Electric P8</li>
+        <li>Autodesk Revit MEP</li>
+      </ul>
+    </section>
+
+    <section class="cv-card" id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li>Albanian</li>
+        <li>Greek</li>
+        <li>English</li>
+        <li>German - learning in progress</li>
+      </ul>
+    </section>
+
+  </main>
 
 </div>
+
+</div>
+
+</body>
+</html>
