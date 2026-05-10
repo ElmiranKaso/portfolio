@@ -1,44 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Elmiran</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#e5e5e5;color:#111}
-.page{max-width:1100px;margin:25px auto;background:#f4f4f4;min-height:650px;padding:25px 50px;box-shadow:0 8px 30px #999}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:bold}
-.nav-links a{text-decoration:none;color:#111;margin:0 18px;font-size:14px}
-.nav-links a.active{border-bottom:2px solid #111;padding-bottom:5px}
-.contact-btn{background:#111;color:white!important;padding:14px 22px}
-h1{font-size:50px}
-.btn{display:inline-block;background:#111;color:white;text-decoration:none;padding:12px 18px;margin-bottom:20px}
-iframe{width:100%;height:550px;border:1px solid #ccc}
-</style>
-</head>
-<body>
-
-<div class="page">
-<nav>
-  <div class="logo">● Elmiran</div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a class="active" href="cv.html">CV</a>
-    <a class="contact-btn" href="contact.html">Contact Me</a>
-  </div>
-</nav>
-
 <h1>CV</h1>
-<p>View my CV below or download it.</p>
 
-<a class="btn" href="assets/cv/Elmiran_CV.pdf" download>Download CV</a>
+<a href="assets/Elmiran_CV.pdf" download class="btn">Download PDF</a>
 
-<iframe src="assets/cv/Elmiran_CV.pdf"></iframe>
+<div class="cv-container">
+
+  <!-- LEFT MENU -->
+  <div class="cv-menu">
+    <p><a href="#contact">Contact</a></p>
+    <p><a href="#summary">Summary</a></p>
+    <p><a href="#experience">Experience</a></p>
+    <p><a href="#skills">Skills</a></p>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="cv-content">
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <p><strong>Name:</strong> Elmiran Kaso</p>
+      <p><strong>Email:</strong> your@email.com</p>
+      <p><strong>Location:</strong> Switzerland</p>
+    </section>
+
+    <section id="summary">
+      <h2>Professional Summary</h2>
+      <p>
+        Electrical Engineer with strong experience in design, system studies,
+        and project supervision across industrial and infrastructure projects.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <h3>Data Center Technician II</h3>
+      <p>Digital Realty, Switzerland</p>
+
+      <ul>
+        <li>Maintenance of electrical systems</li>
+        <li>Infrastructure monitoring</li>
+        <li>Troubleshooting mission-critical systems</li>
+      </ul>
+
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>AutoCAD, Revit, EPLAN</li>
+        <li>Electrical design & calculations</li>
+        <li>Project supervision</li>
+      </ul>
+    </section>
+
+  </div>
 
 </div>
-
-</body>
-</html>
