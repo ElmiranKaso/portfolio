@@ -9,18 +9,20 @@
 body{
   margin:0;
   font-family:Arial, sans-serif;
-  background:#f4f4f4;
+  background:#e5e5e5;
   color:#111;
 }
 
 .page{
   max-width:1200px;
   margin:25px auto;
-  background:white;
-  padding:25px 45px;
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  background:#f4f4f4;
+  min-height:650px;
+  padding:25px 50px;
+  box-shadow:0 8px 30px #999;
 }
 
+/* NAVIGATION */
 nav{
   display:flex;
   justify-content:space-between;
@@ -35,19 +37,41 @@ nav{
 .nav-links a{
   text-decoration:none;
   color:#111;
-  margin:0 15px;
-  font-size:14px;
+  margin:0 18px;
+  font-size:16px;
 }
 
 .nav-links a.active{
-  color:#b000b5;
-  font-weight:bold;
+  border-bottom:2px solid #111;
+  padding-bottom:5px;
 }
 
 .contact-btn{
   background:#111;
   color:white!important;
-  padding:12px 18px;
+  padding:14px 22px;
+}
+
+/* CV PAGE */
+.cv-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.cv-header h1{
+  font-size:52px;
+  font-weight:400;
+  margin:0;
+}
+
+.download-btn{
+  background:#111;
+  color:white;
+  padding:14px 22px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 .cv-layout{
@@ -56,6 +80,7 @@ nav{
   gap:45px;
 }
 
+/* LEFT MENU */
 .cv-sidebar{
   position:sticky;
   top:25px;
@@ -67,35 +92,20 @@ nav{
   color:#111;
   text-decoration:none;
   font-weight:bold;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .cv-sidebar a:hover{
   color:#b000b5;
 }
 
-.cv-main h1{
-  font-size:48px;
-  margin-top:0;
-  font-weight:400;
-}
-
-.download{
-  float:right;
-  background:#b000b5;
-  color:white;
-  text-decoration:none;
-  padding:12px 20px;
-  border-radius:8px;
-  font-weight:bold;
-}
-
+/* RIGHT CONTENT */
 .cv-card{
   background:white;
   padding:28px;
   margin-bottom:25px;
-  box-shadow:0 4px 18px rgba(0,0,0,.15);
   border-radius:6px;
+  box-shadow:0 5px 18px rgba(0,0,0,0.15);
 }
 
 .cv-card h2{
@@ -140,16 +150,22 @@ nav{
   margin-bottom:10px;
 }
 
-ul{
-  margin-top:10px;
-}
-
 li{
   margin-bottom:8px;
   line-height:1.5;
 }
 
 @media(max-width:800px){
+  .page{
+    margin:0;
+    padding:20px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
   .cv-layout{
     grid-template-columns:1fr;
   }
@@ -158,15 +174,14 @@ li{
     position:static;
   }
 
-  nav{
+  .cv-header{
     flex-direction:column;
+    align-items:flex-start;
     gap:20px;
   }
 
-  .download{
-    float:none;
-    display:inline-block;
-    margin-bottom:20px;
+  .cv-row{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -178,6 +193,7 @@ li{
 
 <nav>
   <div class="logo">● Elmiran Kaso</div>
+
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
@@ -187,8 +203,14 @@ li{
   </div>
 </nav>
 
+<div class="cv-header">
+  <h1>CV</h1>
+  <a class="download-btn" href="assets/Elmiran_CV.pdf" download>Download PDF CV</a>
+</div>
+
 <div class="cv-layout">
 
+  <!-- LEFT SIDE MENU -->
   <aside class="cv-sidebar">
     <a href="#contact">Contact Information</a>
     <a href="#summary">Professional Summary</a>
@@ -197,13 +219,11 @@ li{
     <a href="#skills">Skills</a>
     <a href="#certificates">Certificates</a>
     <a href="#languages">Languages</a>
+    <a href="#interests">Hobbies & Interests</a>
   </aside>
 
-  <main class="cv-main">
-
-    <a class="download" href="assets/Elmiran_CV.pdf" download>Download PDF</a>
-
-    <h1>CV</h1>
+  <!-- RIGHT SIDE CONTENT -->
+  <main>
 
     <section class="cv-card" id="contact">
       <h2>Contact Information</h2>
@@ -234,7 +254,9 @@ li{
       <p>
         Electrical Engineer specialized in electrical design, technical studies, calculations,
         and project supervision across industrial and infrastructure projects, including
-        substations, electrical distribution networks, WWTP, and energy systems.
+        substations, electrical distribution networks, WWTP, PV and energy systems.
+        Currently working in mission-critical data center environments with a strong focus
+        on site operations, coordination, troubleshooting, and reliable engineering solutions.
       </p>
     </section>
 
@@ -243,12 +265,13 @@ li{
 
       <div class="experience-item">
         <span class="date">Dec. 2024 - Present</span>
-        <h3>Data Center Technician II / Site Engineering Environment</h3>
+        <h3>Data Center / Site Engineering Environment</h3>
         <p class="company">Digital Realty Switzerland GmbH, Glattbrugg, Switzerland</p>
         <ul>
           <li>Support mission-critical data center infrastructure and electrical systems.</li>
           <li>Perform troubleshooting, monitoring, documentation, and technical coordination.</li>
           <li>Work with BMS, Salesforce, iTRACS DCIM, vendors, and engineering teams.</li>
+          <li>Contribute to safe and reliable site operations in a high-availability environment.</li>
         </ul>
       </div>
 
@@ -259,7 +282,7 @@ li{
         <ul>
           <li>Installed, tested, and maintained electrical systems in data center environments.</li>
           <li>Worked with UPS systems, PDUs, switchgear, MV panels, lighting, and fire protection systems.</li>
-          <li>Interpreted schematics, drawings, and technical documentation.</li>
+          <li>Interpreted electrical schematics, drawings, and technical documentation.</li>
         </ul>
       </div>
 
@@ -271,6 +294,7 @@ li{
           <li>Managed technical sales projects for substations, electrical panels, MV/LV switchgear, transformers, and special applications.</li>
           <li>Supervised technical coordination between design, logistics, production, and customer requirements.</li>
           <li>Worked with Schneider Electric, ABB, Siemens, and Legrand low-voltage equipment.</li>
+          <li>Combined technical engineering knowledge with project management, customer support, and team coordination.</li>
         </ul>
       </div>
 
@@ -280,8 +304,19 @@ li{
         <p class="company">Zita Technologies Ltd</p>
         <ul>
           <li>Prepared studies, calculations, and designs for WWTP, substations, pump stations, and industrial projects.</li>
-          <li>Performed short-circuit, voltage drop, cable sizing, power, and protection selectivity calculations.</li>
-          <li>Used AutoCAD, Revit MEP, EPLAN, DIALux, Relux, 4M ADAPT, and TiSoft.</li>
+          <li>Performed short-circuit, voltage drop, cable sizing, active/reactive power, and protection selectivity calculations.</li>
+          <li>Designed single-line and multiline diagrams for electrical distribution panels.</li>
+          <li>Worked on projects in hospitals, marine applications, heavy industry, steel industry, and infrastructure fields.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <span class="date">Sept. 2005 - Nov. 2008</span>
+        <h3>Electrical Technician</h3>
+        <p class="company">AM-NET Ltd, Athens, Greece</p>
+        <ul>
+          <li>Installed electrical cables, conduits, cable trays, luminaires, motors, inverters, and pumps.</li>
+          <li>Supported installation and maintenance of wiring, control, lighting, and automation systems.</li>
         </ul>
       </div>
 
@@ -289,24 +324,36 @@ li{
 
     <section class="cv-card" id="education">
       <h2>Education</h2>
-      <p><strong>Bachelor of Science in Electrical Engineering</strong><br>
-      University of West Attica, Athens</p>
+
+      <p>
+        <strong>Bachelor of Science in Electrical Engineering</strong><br>
+        University of West Attica, Athens
+      </p>
+
+      <p>
+        <strong>Diploma of Electrical Technician</strong><br>
+        Technical Professional / Vocational High School
+      </p>
     </section>
 
     <section class="cv-card" id="skills">
       <h2>Skills</h2>
+
       <ul>
         <li>Electrical design and technical studies</li>
         <li>Project supervision and site coordination</li>
         <li>MV/LV substations and electrical distribution systems</li>
         <li>WWTP, industrial, hospital, marine, and heavy industry projects</li>
-        <li>AutoCAD, Revit MEP, EPLAN Electric P8, DIALux, Relux</li>
+        <li>Short-circuit, voltage drop, cable sizing, and protection selectivity calculations</li>
+        <li>AutoCAD 2D/3D, Revit MEP, EPLAN Electric P8</li>
+        <li>DIALux, Relux, 4M FINE ADAPT, TiSoft</li>
         <li>BMS, Salesforce, iTRACS DCIM</li>
       </ul>
     </section>
 
     <section class="cv-card" id="certificates">
       <h2>Certificates</h2>
+
       <ul>
         <li>Schneider Electric - Data Center Physical Infrastructure</li>
         <li>Schneider Electric - Best Practices for Building a New Data Center</li>
@@ -314,17 +361,29 @@ li{
         <li>KNX Basic Course</li>
         <li>EPLAN Electric P8</li>
         <li>Autodesk Revit MEP</li>
+        <li>Lighting Protection of Electrical and Electronic Systems</li>
+        <li>Generators Sizing Calculations</li>
       </ul>
     </section>
 
     <section class="cv-card" id="languages">
       <h2>Languages</h2>
+
       <ul>
         <li>Albanian</li>
         <li>Greek</li>
         <li>English</li>
         <li>German - learning in progress</li>
       </ul>
+    </section>
+
+    <section class="cv-card" id="interests">
+      <h2>Hobbies & Interests</h2>
+
+      <p>
+        Engineering technology, electrical systems, data center infrastructure,
+        automation, continuous learning, and technical problem solving.
+      </p>
     </section>
 
   </main>
