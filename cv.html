@@ -22,7 +22,6 @@ body{
   box-shadow:0 8px 30px #999;
 }
 
-/* NAVIGATION */
 nav{
   display:flex;
   justify-content:space-between;
@@ -52,7 +51,6 @@ nav{
   padding:14px 22px;
 }
 
-/* CV HEADER */
 .cv-header{
   display:flex;
   justify-content:space-between;
@@ -80,7 +78,6 @@ nav{
   background:#333;
 }
 
-/* MAIN CV LAYOUT */
 .cv-layout{
   display:grid;
   grid-template-columns:250px 1fr;
@@ -88,7 +85,6 @@ nav{
   align-items:start;
 }
 
-/* LEFT SIDE MENU */
 .cv-sidebar{
   position:sticky;
   top:25px;
@@ -111,7 +107,6 @@ nav{
   color:#b000b5;
 }
 
-/* CV CONTENT IN THE MIDDLE */
 .cv-content{
   max-width:820px;
   margin:0 auto;
@@ -250,19 +245,17 @@ li{
 
 <div class="cv-layout">
 
-  <!-- LEFT SIDE SECTIONS -->
   <aside class="cv-sidebar">
     <a href="#contact">Contact Information</a>
     <a href="#summary">Professional Summary</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#skills">Skills</a>
+    <a href="#software">Software</a>
     <a href="#certificates">Certificates</a>
     <a href="#languages">Languages</a>
-    <a href="#interests">Hobbies & Interests</a>
   </aside>
 
-  <!-- CV CONTENT IN THE MIDDLE -->
   <main class="cv-content">
 
     <section class="cv-card" id="contact">
@@ -284,19 +277,23 @@ li{
       </div>
 
       <div class="cv-row">
+        <strong>Phone</strong>
+        <span>+41 76 225 91 43</span>
+      </div>
+
+      <div class="cv-row">
         <strong>Location</strong>
-        <span>Spreitenbach, Aargau, Switzerland</span>
+        <span>8957 Spreitenbach, Aargau, Switzerland</span>
       </div>
     </section>
 
     <section class="cv-card" id="summary">
       <h2>Professional Summary</h2>
       <p>
-        Electrical Engineer specialized in electrical design, technical studies, calculations,
-        and project supervision across industrial and infrastructure projects, including
-        substations, electrical distribution networks, WWTP, PV and energy systems.
-        Currently working in mission-critical data center environments with a strong focus
-        on site operations, coordination, troubleshooting, and reliable engineering solutions.
+        Electrical Engineer with experience in electrical design, technical studies,
+        project coordination, site operations, and mission-critical data center environments.
+        Skilled in electrical infrastructure, troubleshooting, maintenance coordination,
+        MV/LV systems, technical documentation, and engineering support.
       </p>
     </section>
 
@@ -304,14 +301,28 @@ li{
       <h2>Experience</h2>
 
       <div class="experience-item">
-        <span class="date">Dec. 2024 - Present</span>
-        <h3>Data Center / Site Engineering Environment</h3>
+        <span class="date">Dec. 2025 - Present</span>
+        <h3>Site Engineer</h3>
         <p class="company">Digital Realty Switzerland GmbH, Glattbrugg, Switzerland</p>
         <ul>
-          <li>Support mission-critical data center infrastructure and electrical systems.</li>
-          <li>Perform troubleshooting, monitoring, documentation, and technical coordination.</li>
-          <li>Work with BMS, Salesforce, iTRACS DCIM, vendors, and engineering teams.</li>
-          <li>Contribute to safe and reliable site operations in a high-availability environment.</li>
+          <li>Responsible for site operations, coordination, and supervision of mission-critical infrastructure.</li>
+          <li>Support electrical systems, troubleshooting, and maintenance in data center environments.</li>
+          <li>Coordinate vendors, maintenance activities, and engineering teams.</li>
+          <li>Ensure high availability, safety, and reliability of systems.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <span class="date">Dec. 2024 - Dec. 2025</span>
+        <h3>Customer Service Engineer</h3>
+        <p class="company">Digital Realty Switzerland GmbH, Glattbrugg, Switzerland</p>
+        <ul>
+          <li>Supported operation, maintenance, and troubleshooting of electrical and IT infrastructure in mission-critical data center environments.</li>
+          <li>Performed hardware diagnostics, system maintenance, and structured cabling for fiber and copper networks.</li>
+          <li>Monitored electrical and environmental systems via BMS to ensure uptime and operational efficiency.</li>
+          <li>Collaborated with engineering, IT, and site teams to execute work orders and resolve incidents.</li>
+          <li>Managed work orders, incident tracking, and asset documentation using Salesforce and DCIM tools such as iTRACS.</li>
+          <li>Coordinated vendor activities, including preventive maintenance and emergency repairs for electrical and HVAC systems.</li>
         </ul>
       </div>
 
@@ -320,21 +331,25 @@ li{
         <h3>Data Center Electrical Technician</h3>
         <p class="company">CiriElektro AG, Zurich, Switzerland</p>
         <ul>
-          <li>Installed, tested, and maintained electrical systems in data center environments.</li>
-          <li>Worked with UPS systems, PDUs, switchgear, MV panels, lighting, and fire protection systems.</li>
-          <li>Interpreted electrical schematics, drawings, and technical documentation.</li>
+          <li>Installed, tested, and maintained electrical systems and infrastructure in mission-critical data center environments.</li>
+          <li>Performed power distribution installations including UPS systems, PDUs, switchgear, medium-voltage panels, lighting, and fire protection systems.</li>
+          <li>Conducted troubleshooting and fault diagnosis on electrical circuits and control systems.</li>
+          <li>Executed cable routing, termination, grounding, and bonding of electrical systems and equipment.</li>
+          <li>Interpreted electrical schematics, technical drawings, and documentation to support installation and commissioning.</li>
         </ul>
       </div>
 
       <div class="experience-item">
         <span class="date">May 2018 - Mar. 2024</span>
-        <h3>Sales Executive Engineer / Sales Department Supervisor</h3>
+        <h3>Sales Executive Engineer - Sales Department</h3>
         <p class="company">Seller Hellas S.A., Athens, Greece</p>
         <ul>
-          <li>Managed technical sales projects for substations, electrical panels, MV/LV switchgear, transformers, and special applications.</li>
-          <li>Supervised technical coordination between design, logistics, production, and customer requirements.</li>
-          <li>Worked with Schneider Electric, ABB, Siemens, and Legrand low-voltage equipment.</li>
-          <li>Combined technical engineering knowledge with project management, customer support, and team coordination.</li>
+          <li>Managed technical projects involving substations, electrical distribution systems, and MV/LV equipment from design review to final delivery.</li>
+          <li>Performed electrical studies including circuit breaker selectivity and developed multiline schematics and technical documentation.</li>
+          <li>Coordinated with design, production, logistics, and construction teams to ensure project execution according to technical specifications.</li>
+          <li>Prepared and reviewed technical offers, ensuring alignment with customer requirements and engineering standards.</li>
+          <li>Supervised technical processes within the sales department, supporting project planning and execution.</li>
+          <li>Developed strong expertise in low-voltage and medium-voltage equipment from Schneider Electric, ABB, Siemens, and Legrand.</li>
         </ul>
       </div>
 
@@ -343,10 +358,14 @@ li{
         <h3>Electrical Design Engineer</h3>
         <p class="company">Zita Technologies Ltd</p>
         <ul>
-          <li>Prepared studies, calculations, and designs for WWTP, substations, pump stations, and industrial projects.</li>
-          <li>Performed short-circuit, voltage drop, cable sizing, active/reactive power, and protection selectivity calculations.</li>
-          <li>Designed single-line and multiline diagrams for electrical distribution panels.</li>
-          <li>Worked on projects in hospitals, marine applications, heavy industry, steel industry, and infrastructure fields.</li>
+          <li>Performed electrical studies and technical evaluations of project specifications, selecting equipment such as generators, transformers, and electrical systems.</li>
+          <li>Designed and developed electrical systems for industrial and infrastructure projects including WWTP, substations, and pump stations.</li>
+          <li>Executed 2D and 3D electrical design using AutoCAD and Revit MEP.</li>
+          <li>Performed electrical calculations including short-circuit analysis, voltage drop, cable sizing, active/reactive power, and protection device selectivity.</li>
+          <li>Designed single-line and multiline diagrams for electrical distribution systems using EPLAN, 4M ADAPT, and TiSoft.</li>
+          <li>Conducted lighting design and analysis using DIALux and Relux according to international standards including CEN, CIE, EN 12464, and EN 13201.</li>
+          <li>Prepared technical documentation, datasheets, and project files for electrical equipment and systems.</li>
+          <li>Collaborated with multidisciplinary teams including mechanical, civil, and chemical engineers.</li>
         </ul>
       </div>
 
@@ -355,8 +374,12 @@ li{
         <h3>Electrical Technician</h3>
         <p class="company">AM-NET Ltd, Athens, Greece</p>
         <ul>
-          <li>Installed electrical cables, conduits, cable trays, luminaires, motors, inverters, and pumps.</li>
-          <li>Supported installation and maintenance of wiring, control, lighting, and automation systems.</li>
+          <li>Installed electrical cables using conduits and cable trays.</li>
+          <li>Performed installation, connection, and maintenance of electrical equipment including luminaires, motors, inverters, and pumps.</li>
+          <li>Conducted testing, calibration, and troubleshooting of electrical systems and control equipment.</li>
+          <li>Installed and maintained wiring, lighting, and control systems.</li>
+          <li>Inspected electrical components such as transformers and circuit breakers, identifying and resolving faults.</li>
+          <li>Supported installation of control and automation systems including HVAC and security systems.</li>
         </ul>
       </div>
 
@@ -367,12 +390,14 @@ li{
 
       <p>
         <strong>Bachelor of Science in Electrical Engineering</strong><br>
-        University of West Attica, Athens
+        University of West Attica, Athens<br>
+        Feb. 2007 - Jun. 2012
       </p>
 
       <p>
         <strong>Diploma of Electrical Technician</strong><br>
-        Technical Professional / Vocational High School
+        1st Technical Professional High School of Galatsion, Electrical Department<br>
+        Feb. 2003 - Jun. 2005
       </p>
     </section>
 
@@ -380,14 +405,37 @@ li{
       <h2>Skills</h2>
 
       <ul>
-        <li>Electrical design and technical studies</li>
-        <li>Project supervision and site coordination</li>
-        <li>MV/LV substations and electrical distribution systems</li>
-        <li>WWTP, industrial, hospital, marine, and heavy industry projects</li>
-        <li>Short-circuit, voltage drop, cable sizing, and protection selectivity calculations</li>
-        <li>AutoCAD 2D/3D, Revit MEP, EPLAN Electric P8</li>
-        <li>DIALux, Relux, 4M FINE ADAPT, TiSoft</li>
-        <li>BMS, Salesforce, iTRACS DCIM</li>
+        <li>Extensive AutoCAD knowledge</li>
+        <li>Electrical circuit diagnosis</li>
+        <li>Circuit troubleshooting</li>
+        <li>Single-line and multiline electrical schematics</li>
+        <li>Extensive knowledge of ABB, Schneider Electric, Legrand, and Siemens LV products</li>
+        <li>Teamwork</li>
+        <li>Problem-solving</li>
+        <li>Technical support</li>
+        <li>Attention to detail</li>
+      </ul>
+    </section>
+
+    <section class="cv-card" id="software">
+      <h2>Software</h2>
+
+      <ul>
+        <li>AutoCAD 2D</li>
+        <li>AutoCAD 3D MEP</li>
+        <li>Autodesk Revit MEP</li>
+        <li>EPLAN Electric P8 - Electrical Schematic Design</li>
+        <li>4M FINE ADAPT</li>
+        <li>TiSoft Electrical Design</li>
+        <li>EcoStruxure Power Design by Schneider Electric</li>
+        <li>DOC by ABB</li>
+        <li>DIALux evo - Lighting Design Software</li>
+        <li>Relux - Lighting Design Software</li>
+        <li>ETS6 - KNX Association</li>
+        <li>Microsoft Office</li>
+        <li>Entersoft Business Suite</li>
+        <li>Salesforce Platform</li>
+        <li>iTRACS</li>
       </ul>
     </section>
 
@@ -395,14 +443,20 @@ li{
       <h2>Certificates</h2>
 
       <ul>
-        <li>Schneider Electric - Data Center Physical Infrastructure</li>
-        <li>Schneider Electric - Best Practices for Building a New Data Center</li>
-        <li>AutoCAD 2D & 3D Modeling</li>
-        <li>KNX Basic Course</li>
-        <li>EPLAN Electric P8</li>
-        <li>Autodesk Revit MEP</li>
-        <li>Lighting Protection of Electrical and Electronic Systems</li>
-        <li>Generators Sizing Calculations</li>
+        <li><strong>Data Center System Planning</strong> - Schneider Electric, Jan. 2026</li>
+        <li><strong>Data Center Projects: Commissioning</strong> - Schneider Electric, Jan. 2026</li>
+        <li><strong>Qualification for Switching Authorization on Medium and Low Voltage Systems</strong> - Electrosuisse, Aug. 2025</li>
+        <li><strong>An Overview of Data Center Physical Infrastructure</strong> - Schneider Electric, Jun. 2025</li>
+        <li><strong>Microsoft Security Essentials Professional Certificate</strong> - Microsoft, Apr. 2025</li>
+        <li><strong>Zendesk Customer Service Professional Certificate</strong> - Zendesk, Feb. 2025</li>
+        <li><strong>Best Practices for Building a New Data Center Certificate</strong> - Schneider Electric, Jan. 2025</li>
+        <li><strong>AutoCAD 2D & 3D Modeling</strong> - Autodesk, Jan. 2024</li>
+        <li><strong>KNX Basic Course - KNX Partner Building Automation and Control System</strong> - KNX Association, Nov. 2022</li>
+        <li><strong>EPLAN Electric P8 - Electrical Schematic Design</strong> - SEV IVEPE, May 2018</li>
+        <li><strong>Autodesk Revit MEP 2017</strong> - Autodesk, Oct. 2017</li>
+        <li><strong>Lightning Protection of Electrical and Electronic Systems</strong> - Elemko S.A., May 2016</li>
+        <li><strong>Generators Sizing Calculations</strong> - Petros Petropoulos AEBE / Petrogen, Oct. 2014</li>
+        <li><strong>Wastewater Treatment Plant, Municipal Solid Waste</strong> - Piraeus University of Applied Science, Jan. 2013</li>
       </ul>
     </section>
 
@@ -413,17 +467,8 @@ li{
         <li>Albanian</li>
         <li>Greek</li>
         <li>English</li>
-        <li>German - learning in progress</li>
+        <li>Deutsch - learning in progress</li>
       </ul>
-    </section>
-
-    <section class="cv-card" id="interests">
-      <h2>Hobbies & Interests</h2>
-
-      <p>
-        Engineering technology, electrical systems, data center infrastructure,
-        automation, continuous learning, and technical problem solving.
-      </p>
     </section>
 
   </main>
