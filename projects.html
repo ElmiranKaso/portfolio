@@ -3,33 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects - Elmiran</title>
+<title>Projects - Elmiran Kaso</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#e5e5e5;color:#111}
-.page{max-width:1100px;margin:25px auto;background:#f4f4f4;min-height:650px;padding:25px 50px;box-shadow:0 8px 30px #999}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:bold}
-.nav-links a{text-decoration:none;color:#111;margin:0 18px;font-size:14px}
-.nav-links a.active{border-bottom:2px solid #111;padding-bottom:5px}
-.contact-btn{background:#111;color:white!important;padding:14px 22px}
-h1{font-size:50px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-.card{background:white;box-shadow:0 5px 20px #bbb}
-.card img{width:100%;height:180px;object-fit:cover}
-.card-content{padding:20px}
-.card-content h3{font-size:28px;margin:0 0 10px}
-.card-content p{color:#555}
-.btn{display:inline-block;background:#111;color:white;text-decoration:none;padding:10px 15px;margin:5px 5px 0 0}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#e5e5e5;
+  color:#111;
+}
+
+.page{
+  max-width:1100px;
+  margin:25px auto;
+  background:#f4f4f4;
+  min-height:650px;
+  padding:25px 50px;
+  box-shadow:0 8px 30px #999;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:50px;
+}
+
+.logo{
+  font-weight:bold;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#111;
+  margin:0 18px;
+  font-size:14px;
+}
+
+.nav-links a.active{
+  border-bottom:2px solid #111;
+  padding-bottom:5px;
+}
+
+.contact-btn{
+  background:#111;
+  color:white!important;
+  padding:14px 22px;
+}
+
+h1{
+  font-size:55px;
+  font-weight:400;
+  margin-bottom:10px;
+}
+
+.intro{
+  font-size:18px;
+  max-width:800px;
+  line-height:1.6;
+  margin-bottom:40px;
+  color:#444;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
+}
+
+.card{
+  background:white;
+  box-shadow:0 5px 20px #bbb;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  background:#ddd;
+}
+
+.card-content{
+  padding:25px;
+}
+
+.card-content h3{
+  font-size:30px;
+  margin:0 0 15px;
+}
+
+.card-content p{
+  color:#555;
+  line-height:1.6;
+}
+
+.project-info{
+  margin:20px 0;
+}
+
+.project-info strong{
+  display:block;
+  margin-top:12px;
+}
+
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:18px 0;
+}
+
+.tools span{
+  background:#111;
+  color:white;
+  padding:7px 12px;
+  border-radius:4px;
+  font-size:14px;
+}
+
+.btn{
+  display:inline-block;
+  background:#111;
+  color:white;
+  text-decoration:none;
+  padding:11px 16px;
+  margin:8px 8px 0 0;
+  border-radius:4px;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:#333;
+}
+
+.note{
+  font-size:14px;
+  color:#777;
+  font-style:italic;
+  margin-top:18px;
+}
+
+@media(max-width:800px){
+  .page{
+    margin:0;
+    padding:20px;
+  }
+
+  nav{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .nav-links a{
+    margin:0;
+  }
+
+  h1{
+    font-size:42px;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <div class="page">
+
 <nav>
   <div class="logo">● Elmiran Kaso</div>
+
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="index.html">About Me</a>
+    <a href="about.html">About Me</a>
     <a class="active" href="projects.html">Projects</a>
     <a href="cv.html">CV</a>
     <a class="contact-btn" href="contact.html">Contact Me</a>
@@ -37,31 +191,58 @@ h1{font-size:50px}
 </nav>
 
 <h1>Projects</h1>
-<p>A collection of my engineering and programming projects.</p>
+
+<p class="intro">
+  A selection of engineering projects focused on electrical design, automation,
+  infrastructure systems, technical documentation, and site supervision.
+</p>
 
 <div class="grid">
 
+  <!-- PROJECT 1 -->
   <div class="card">
-    <img src="assets/img/project1.jpg" alt="Project 1">
-    <div class="card-content">
-      <h3>Project 1</h3>
-      <p>Write a short description of this project here.</p>
-      <a class="btn" href="assets/files/project1.pdf" target="_blank">View PDF</a>
-      <a class="btn" href="https://github.com/YOUR-GITHUB/project1" target="_blank">GitHub</a>
-    </div>
-  </div>
+    <img src="assets/img/wwtp-donousa.jpg" alt="WWTP Donousa Island project">
 
-  <div class="card">
-    <img src="assets/img/project2.jpg" alt="Project 2">
     <div class="card-content">
-      <h3>Project 2</h3>
-      <p>Write a short description of this project here.</p>
-      <a class="btn" href="assets/files/project2.pdf" target="_blank">View PDF</a>
-      <a class="btn" href="https://github.com/YOUR-GITHUB/project2" target="_blank">GitHub</a>
+      <h3>WWTP Donousa Island</h3>
+
+      <p>
+        Electrical design and supervision for a Wastewater Treatment Plant on Donousa Island,
+        including electrical distribution, control panel documentation, automation support,
+        lighting design, and site coordination.
+      </p>
+
+      <div class="project-info">
+        <strong>My Role:</strong>
+        <span>Electrical Design Engineer and Project Supervisor</span>
+
+        <strong>Scope:</strong>
+        <span>Electrical design, EPLAN diagrams, automation support, lighting study, installation supervision.</span>
+      </div>
+
+      <div class="tools">
+        <span>EPLAN</span>
+        <span>AutoCAD</span>
+        <span>DIALux</span>
+        <span>TIA Portal</span>
+      </div>
+
+      <a class="btn" href="assets/projects/wwtp-donousa/wwtp-donousa.pdf" target="_blank">
+        View Project PDF
+      </a>
+
+      <a class="btn" href="assets/projects/wwtp-donousa/drawings.pdf" target="_blank">
+        View Drawings
+      </a>
+
+      <p class="note">
+        Drawings and documentation are anonymized and presented for portfolio demonstration only.
+      </p>
     </div>
   </div>
 
 </div>
+
 </div>
 
 </body>
