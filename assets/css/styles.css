@@ -60,9 +60,9 @@ h1{
 
 /* PROJECTS STACKED VERTICALLY */
 .grid{
-  display:flex;
-  flex-direction:column;
-  gap:35px;
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:35px !important;
 }
 
 .card{
